@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+        <p>Name: {{studentDetails.name}}</p>
+        <p>Major: {{studentDetails.major}}</p>
+        <p>Email: {{studentDetails.email}}</p>
+        <p>City: {{studentDetails.city}}</p>
+        <p>Country: {{studentDetails.country}}</p>
+    
+        <button type="button" class="btn btn-secondary" (click)="toggleDeadlines()">Show Deadlines</button>
+        <button type="button" class="btn btn-secondary" (click)="toggleAddDeadline()">Add New Deadline</button>
+        <button type="button" class="btn btn-secondary" (click)="toggleUpdateAddress()">Update Address</button>
+        <button type="button" class="btn btn-primary" (click)="logout()">Logout</button>
+    </div>
+
+    <div class="col" *ngIf="showAddDeadline || showUpdateAddress">
+        <app-add-deadline [email]="email" *ngIf="showAddDeadline"></app-add-deadline>
+        <app-update-address [email]="email" *ngIf="showUpdateAddress"></app-update-address>
+    </div>
+    
+    <div class="col" *ngIf="showDeadlines">
+        <div class="deadlines">
+            <ul class="list-group list-group-horizontal body">
+                <li class="list-group-item">Title</li>
+                <li class="list-group-item">Days Left</li>
+            </ul>
+            <app-deadline *ngFor="let deadline of studentDetails.deadlines" [deadline]="deadline"></app-deadline>
+        </div>
+    </div>
+  </div>
+</div>
