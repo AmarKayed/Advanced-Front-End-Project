@@ -3,6 +3,10 @@ import { ActivatedRoute } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
 import { ProfileService, Student, StudentDetailsClass } from 'src/app/services/profile.service';
 
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { SearchFilterPipe } from 'src/app/pipes/search-filter.pipe';
+
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
@@ -16,6 +20,8 @@ export class ProfileComponent implements OnInit {
   showDeadlines: boolean = false;
   showAddDeadline: boolean = false;
   showUpdateAddress: boolean = false;
+
+  searchTerm: string = '';
 
   constructor(
     private auth: AuthService,

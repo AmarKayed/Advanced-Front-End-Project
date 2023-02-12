@@ -9,6 +9,7 @@ import { AddDeadlineComponent } from './add-deadline/add-deadline.component';
 
 
 import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
@@ -16,13 +17,15 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatChipsModule } from '@angular/material/chips';
 import { UpdateAddressComponent } from './update-address/update-address.component';
+import { SearchFilterPipe } from 'src/app/pipes/search-filter.pipe';
 
 @NgModule({
   declarations: [
     ProfileComponent,
     DeadlineComponent,
     AddDeadlineComponent,
-    UpdateAddressComponent
+    UpdateAddressComponent,
+    SearchFilterPipe
   ],
   imports: [
     CommonModule,
@@ -35,6 +38,7 @@ import { UpdateAddressComponent } from './update-address/update-address.componen
     MatButtonModule,
     MatCheckboxModule,
     MatChipsModule,
+    FormsModule
   ]
 })
 export class ProfileModule { }

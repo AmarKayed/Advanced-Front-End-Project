@@ -24,7 +24,8 @@
                 <li class="list-group-item">Title</li>
                 <li class="list-group-item">Days Left</li>
             </ul>
-            <app-deadline *ngFor="let deadline of studentDetails.deadlines" [deadline]="deadline"></app-deadline>
+            <input type="text" [(ngModel)]="searchTerm" placeholder="search deadline">
+            <app-deadline *ngFor="let deadline of studentDetails.deadlines | searchFilter:searchTerm" [deadline]="deadline"></app-deadline>
         </div>
     </div>
   </div>
