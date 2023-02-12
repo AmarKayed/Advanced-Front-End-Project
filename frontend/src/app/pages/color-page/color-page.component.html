@@ -1,0 +1,7 @@
+
+<div class="color-page" [style.backgroundColor]="backgroundColor" [style.transition]="'all 0.2s ease-in'">
+    <h1 class="choose-your-color">{{ 'choose your color!' | titlecase }}</h1>
+    <div class="color-buttons-container" *ngFor="let color of colors">
+        <app-color-button [color]="color" (colorEmitter)="updateBackgroundColor($event)"></app-color-button>
+    </div>
+</div>

@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LoginComponent } from './modules/login/login/login.component';
+import { ColorPageComponent } from './pages/color-page/color-page.component';
+
 const routes: Routes = [
-  { path: '', redirectTo: 'login', pathMatch: 'full'}
+  { path: '', redirectTo: 'login', pathMatch: 'full'},
+  { path: 'colors', component: ColorPageComponent, pathMatch: 'full'}
 ];
 
 @NgModule({

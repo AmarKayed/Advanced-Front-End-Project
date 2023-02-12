@@ -32,6 +32,8 @@ export class ProfileComponent implements OnInit {
             const { name, major, email, city, country} = {...student, ...address}
             const newStudentDetailsClass = new StudentDetailsClass( name, major, email, city, country, deadlines); 
             this.profileService.changeMessage(newStudentDetailsClass)
+            console.log(newStudentDetailsClass);
+            console.log(student);
           });
         });
       });

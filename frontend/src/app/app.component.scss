@@ -1,0 +1,13 @@
+.navbar{
+    height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(124, 46, 249);
+    > a {
+        text-decoration: none;
+        font-size: 1.5em;
+        text-transform: capitalize;
+        color: white;
+    }
+}

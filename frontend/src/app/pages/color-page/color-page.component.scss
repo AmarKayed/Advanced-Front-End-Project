@@ -1,0 +1,16 @@
+.choose-your-color{
+    width: auto;
+    // background-color: red;
+    margin: auto;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.color-buttons-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    // background-color: black;
+    width: 100%;
+}
