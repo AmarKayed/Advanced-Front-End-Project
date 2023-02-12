@@ -1,6 +1,39 @@
 (The following text is in Romanian)
 
 # Barem
+```
+Barem de notare proiect: 
+
+- Sa aiba mai multe rute  *2p*
+- Sa se foloseasca componente reutilizabile *2p*
+- Sa se comunice intre componente** 2p**
+- Rute publice si private *1p*
+- Sa fie cel putin o pagina cu un form ( login/register) *2p*
+- Firebase sau orice alt mediu de backend *1p*
+
+Pt react: folosierea unui state manager ( redux, mobx ... ) *1p*
+```
+- Sa aiba mai multe rute:
+  - Rutele se pot gasi in `app-routing.module.ts`, sunt atat publice cat si private.
+- Componente reutilizabile:
+  - `color-button.component.ts`
+  - `deadline.component.ts`
+- Comunicare intre componente:
+  - @Input(): in componentele reutilizabile anterior mentionate
+  - @Output(): in `deadline.component.ts`
+- Rute publice si private:
+  - **publice**: login, not-found, colors
+  - **private**: profile/:email
+- Form:
+  - login si register form, ambele pe pagina de `/login`
+- Back-End:
+  - Projectul de back-end din cadrul acestui repo
+- Extra:
+  - `search-filter.pipe.ts`
+
+
+
+# Extra
 
 Intai avem cerintele proiectului, dupa care avem unde se regasesc mai exact aceste cerinte completate in acest proiect.
 
@@ -120,9 +153,11 @@ Orice mai e ambiguu, dati mi mesaj
     * In folderul student-platform.DAL avem toate entitatile + configuratiile + repository-urile + modelele pentru entitatile noastre
         * Fiecare clasa are si propria interfata asociata
         * Flow-ul proiectului este urmatorul: Se primeste un request intr-un endpoint dintr-un controller, se apeleaza o metoda din BLL, metoda din BLL cere la randul ei datele din DAL, DAL face conexiunea cu baza de date, cere datele insa nu le trimite asa cum sunt, in schimb trimite un model ce contine strict datele ce trebuie sa apara la client(fara chei primare, externe, obiecte virtuale, relatii, etc), BLL-ul primeste modelul, il prelucreaza in functie de logica aplicatiei, il intoarce la controller care in functie de rezultat trimite raspunsul final al request-ului impreuna cu rezultatul, dupa caz.
-
-### Prezente
+<details>
+<summary><b> Prezente </b></summary>
 Am fost prezent la toate cele 5 laboratoare de ASP.NET + 3 laboratoare Angular, laboratorul 8 nu s-a tinut, intrucat a picat pe 1 decembrie, iar ultimele 2 laboratoare erau cu prezenta optionala, intrucat erau doar pentru intrebari legate de proiect.
 
 ### Functionalitati Extra
 Proiectul nu are functionatlitati extra precum autentificare prin facebook sau serviciu de mail.
+
+</details>
