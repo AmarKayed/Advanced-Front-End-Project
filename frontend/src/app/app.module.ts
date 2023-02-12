@@ -8,12 +8,14 @@ import { LoginModule } from './modules/login/login.module';
 import { ProfileModule } from './modules/profile/profile.module';
 import { ColorPageComponent } from './pages/color-page/color-page.component';
 import { ColorButtonComponent } from './components/color-button/color-button.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ColorPageComponent,
-    ColorButtonComponent
+    ColorButtonComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
